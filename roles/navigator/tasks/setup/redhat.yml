@@ -33,6 +33,6 @@
 
 - name: "Setup | Show ansible-navigator output"
   ansible.builtin.debug:
-     msg: "{{ ansible_navigator_setup_launch.stdout_lines }}"
+     msg: "{{ _ansible_navigator_setup_launch.stdout_lines }}"
 
 ...

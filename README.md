@@ -43,8 +43,7 @@ MTO79 Ansible collection for installing and configuring Ansible on system.
 
 | Role | Description | Tests |
 | --- | --- | --- |
-| [proxyservices.aws.dns](https://github.com/mto79/ansible_collection_mto79.ansible/roles/navigator/blob/main/README.md) | Ansible role for installing ansible navigator. |  |
-
+| [proxyservices.ansible.navigator](https://github.com/mto79/ansible_collection_mto79.ansible/roles/navigator/blob/main/README.md) | Ansible role for installing ansible navigator. |  |
 
 Usage:
 

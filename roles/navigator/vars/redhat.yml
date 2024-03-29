@@ -1,0 +1,8 @@
+---
+ansible_navigator_setup_shell_init: "/home/{{ ansible_user }}/.profile"
+ansible_navigator_setup_path: "/home/{{ ansible_user }}/.local/bin"
+
+ansible_navigator_setup_packages:
+  - "python3-pip"
+
+...

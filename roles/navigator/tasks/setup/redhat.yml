@@ -1,0 +1,38 @@
+---
+- name: "Setup | Install packaged required for ansible-navigator"
+  become: true
+  ansible.builtin.package:
+    name: "{{ ansible_navigator_setup_packages }}"
+    state: "present"
+
+- name: "Setup | Install ansible-navigator via pip"
+  ansible.builtin.pip:
+    name: "ansible-navigator"
+    extra_args: "--user"
+
+- name: "Setup | Add ansible-navigator path to shell initialization file"
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_navigator_setup_shell_init }}"
+    line: "export PATH={{ ansible_navigator_setup_path }}:$PATH"
+    create: true
+
+- name: "Setup | Source the shell initialization file"
+  ansible.builtin.shell:
+    cmd: ". {{ ansible_navigator_setup_shell_init }}"
+    args:
+      executable: "/bin/bash"
+    failed_when: false
+    ignore_errors: true
+
+- name: "Setup | Launch ansible-navigator to download demo execution-environment image"
+  ansible.builtin.command:
+    cmd: "{{ ansible_navigator_setup_path }}/ansible-navigator"
+  failed_when: false
+  ignore_errors: true
+  register: "_ansible_navigator_setup_launch"
+
+- name: "Setup | Show ansible-navigator output"
+  ansible.builtin.debug:
+     msg: "{{ ansible_navigator_setup_launch.stdout_lines }}"
+
+...

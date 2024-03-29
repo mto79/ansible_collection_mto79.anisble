@@ -15,7 +15,6 @@ MTO79 Ansible collection for installing and configuring Ansible on system.
   - [Changelogs](#changelogs)
     - [Generating changelogs](#generating-changelogs)
     - [Release notes](#release-notes)
-  - [Getting Involved](#getting-involved)
   - [Licensing](#licensing)
 
 ## [Requirements](#requirements)
@@ -144,10 +143,6 @@ wait until check and release jobs finish and check in galaxy that new version is
 ### Release notes
 
 See [CHANGELOG.rst](CHANGELOG.rst).
-
-## [Getting Involved](#getting-involved)
-
-See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## [Licensing](#licensing)
 

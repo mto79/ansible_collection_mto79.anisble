@@ -21,8 +21,8 @@
     cmd: ". {{ ansible_navigator_setup_shell_init }}"
     args:
       executable: "/bin/bash"
-    failed_when: false
-    ignore_errors: true
+  failed_when: false
+  ignore_errors: true
 
 - name: "Setup | Launch ansible-navigator to download demo execution-environment image"
   ansible.builtin.command:
